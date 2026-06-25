@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Secrets and environment variables
+.env
+.env.local
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store
