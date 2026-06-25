@@ -1,0 +1,22 @@
+{
+  "name": "triage-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Internal support ticket triage — core loop (Gemini). Step 1.",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^2.10.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
