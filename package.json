@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Internal support ticket triage \u2014 core loop (Gemini). Step 1.",
+  "description": "Internal support ticket triage — core loop (Gemini). Step 1.",
   "scripts": {
     "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory ui",
     "triage": "tsx src/index.ts",
