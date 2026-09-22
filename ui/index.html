@@ -49,17 +49,18 @@
     --radius-2xl: calc(var(--radius) + 8px);
     --radius-3xl: calc(var(--radius) + 12px);
     --radius-4xl: calc(var(--radius) + 16px);
-    /* nesting stays concentric and lands on the ramp: 4xl card, lg body, sm items */
-    --radius-card: var(--radius-4xl);   /* 24px */
-    --pad-card: 16px;
-    --radius-body: var(--radius-lg);    /*  8px */
-    --inset-list: 4px;
-    --radius-item: var(--radius-sm);    /*  4px */
-    --inset-queue: 4px;
-    --radius-row:  var(--radius-sm);    /*  4px */
-    --radius-eval: var(--radius-3xl);   /* 20px */
+    /* nesting stays concentric and lands on the ramp with a 12px base:
+       4xl card (28) minus 12 padding = xl body (16); minus 8 gutter = sm items (8) */
+    --radius-card: var(--radius-4xl);   /* 28px */
+    --pad-card: 12px;
+    --radius-body: var(--radius-xl);    /* 16px */
+    --inset-list: 8px;
+    --radius-item: var(--radius-sm);    /*  8px */
+    --inset-queue: 6px;
+    --radius-row:  var(--radius-md);    /* 10px */
+    --radius-eval: var(--radius-3xl);   /* 24px */
     --pad-eval: 16px;
-    --radius-metric: var(--radius-sm);  /*  4px */
+    --radius-metric: var(--radius-sm);  /*  8px */
     --radius-chip: var(--radius-sm);
     --sans: var(--font-sans);
     --mono: var(--font-mono);

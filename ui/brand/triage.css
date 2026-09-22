@@ -20,7 +20,7 @@
 
 :root,
 .force-light {
-  --radius: 0.5rem;
+  --radius: 0.75rem;   /* 12px base: ramp runs 8, 10, 12, 16, 20, 24, 28 */
   --card-shadow: 0 0 0 1px #E4DFF3, 0 1px 2px -1px rgb(30 26 51 / 0.06), 0 2px 4px 0 rgb(30 26 51 / 0.04);
   --card-shadow-hover: 0 0 0 1px #E4DFF3, 0 8px 24px -12px rgb(91 75 214 / 0.18);
   --card-shadow-selected: 0 0 0 1.5px var(--primary), 0 1px 3px -1px rgb(30 26 51 / 0.06), 0 2px 6px 0 rgb(30 26 51 / 0.04);
