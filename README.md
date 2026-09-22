@@ -57,7 +57,8 @@ default `gemini-3.5-flash`).
 ## Run
 
 ```bash
-npm run dev        # tsx src/index.ts — runs the hardcoded T001 ticket
+npm run triage     # tsx src/index.ts — runs the hardcoded ticket through the core loop
+npm run dev        # serves the design prototype in ui/ at http://localhost:4173 (no key needed)
 npm run typecheck  # tsc --noEmit
 npm run build      # tsc -> dist/
 ```

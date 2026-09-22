@@ -75,7 +75,7 @@ export function applyPolicy(c: Classification): PolicyResult {
   }
   if (lowConfidence) {
     reasons.push(
-      `confidence ${c.confidence.toFixed(2)} below threshold ${CONFIDENCE_THRESHOLD.toFixed(2)}`,
+      `confidence ${c.confidence.toFixed(2)} below the ${CONFIDENCE_THRESHOLD.toFixed(2)} gate`,
     );
   }
 
