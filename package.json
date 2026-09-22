@@ -8,7 +8,8 @@
     "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory ui",
     "triage": "tsx src/index.ts",
     "build": "tsc",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "predev": "mkdir -p ui/vendor && cp node_modules/@fracazo/design-system/css/roles.css node_modules/@fracazo/design-system/css/motion.css ui/vendor/"
   },
   "license": "MIT",
   "dependencies": {
@@ -16,6 +17,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@fracazo/design-system": "github:fracazo/design-system",
     "@types/node": "^26.0.1",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"

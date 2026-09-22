@@ -1,0 +1,158 @@
+/* =============================================================================
+   Brand: TRIAGE AGENT (ui/brand/triage.css)
+
+   The product's brand file for @fracazo/design-system. Every role roles.css
+   declares, nothing more, nothing less. Values are the Jacaranda house look
+   (brand sheet v4, via the studio's record skin) so the exploration shows the
+   system's intent; replace them with the product's own when it has one.
+
+   The page is plain HTML with no Tailwind, so the @theme block below is
+   inert in the browser; the two font roles are also set as ordinary custom
+   properties on :root for that reason.
+   ============================================================================= */
+
+:root { --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif; --font-mono: "IBM Plex Mono", ui-monospace, monospace; }
+
+@theme inline {
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+:root,
+.force-light {
+  --radius: 0.5rem;
+  --card-shadow: 0 0 0 1px #E4DFF3, 0 1px 2px -1px rgb(30 26 51 / 0.06), 0 2px 4px 0 rgb(30 26 51 / 0.04);
+  --card-shadow-hover: 0 0 0 1px #E4DFF3, 0 8px 24px -12px rgb(91 75 214 / 0.18);
+  --card-shadow-selected: 0 0 0 1.5px var(--primary), 0 1px 3px -1px rgb(30 26 51 / 0.06), 0 2px 6px 0 rgb(30 26 51 / 0.04);
+  --background: #FAF8FE;
+  --primary-foreground: #FAF8FE;
+  --secondary: #F1ECFD;
+  --secondary-foreground: #1E1A33;
+  --muted: #F1ECFD;
+  --muted-foreground: #5E5583;
+  --accent-foreground: #5B4BD6;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #E4DFF3;
+  --input: #E4DFF3;
+  --band: #F1ECFD;
+  --band-2: #E4DFF3;
+  --surface: #FFFFFF;
+  --surface-2: #F1ECFD;
+  --ink: #1E1A33;
+  --ink-2: #45405E;
+  --ink-3: #5E5583;
+  --line: #E4DFF3;
+  --line-2: #E4DFF3;
+  --brand: #5B4BD6;
+  --brand-ink: #5B4BD6;
+  --brand-soft: #F1ECFD;
+  --dark-accent: #8B6BE8;
+  --headline-accent: #5B4BD6;
+  --highlight: #B79BF0;
+  --highlight-ink: #5B4BD6;
+  --highlight-soft: #F1ECFD;
+  --highlight-deep: #5B4BD6;
+  --dark: #1E1A33;
+  --dark-2: #2A2545;
+  --dark-3: #161326;
+  --dark-4: #100E1C;
+  --dark-line: #4C4470;
+  --dark-soft: #C4BCE4;
+  --dark-ink: #FAF8FE;
+  --dark-ink-2: #D6CFF0;
+  --dark-muted: #C4BCE4;
+  --dark-soft-2: #9B92C4;
+  --dark-faint: #7A7399;
+  --dark-faint-2: #5E5583;
+  --dark-brand: #B79BF0;
+  --chip-1-soft: #E8F2E8;
+  --chip-1-ink: #3D5A3A;
+  --chip-2-soft: #F1ECFD;
+  --chip-2-ink: #8B6BE8;
+  --chip-3-soft: #ECECFD;
+  --chip-3-ink: #4A529E;
+  --glow-1: #F1ECFD;
+  --glow-2: #E4DFF3;
+  --status-want: oklch(0.606 0.117 158);
+  --status-want-soft: oklch(0.945 0.012 158);
+  --status-ifnec: var(--highlight);
+  --status-ifnec-soft: var(--highlight-soft);
+  --status-no: oklch(0.616 0.156 22);
+  --status-no-soft: oklch(0.949 0.017 22);
+  --bar-shadow: 0 -4px 16px rgb(30 26 51 / 0.06);
+  --warm-shadow-sm: 0 1px 2px rgb(30 26 51 / 0.05), 0 4px 16px -8px rgb(91 75 214 / 0.12);
+  --warm-shadow-md: 0 2px 4px rgb(30 26 51 / 0.04), 0 18px 40px -20px rgb(91 75 214 / 0.16);
+  --warm-shadow-lg: 0 30px 80px -36px rgb(91 75 214 / 0.22);
+}
+
+.dark {
+  --card-shadow: 0 0 0 1px #4C4470, 0 1px 2px -1px rgb(0 0 0 / 0.4), 0 2px 4px 0 rgb(0 0 0 / 0.3);
+  --card-shadow-hover: 0 0 0 1px #4C4470, 0 8px 28px -12px rgb(0 0 0 / 0.55);
+  --card-shadow-selected: 0 0 0 1.5px var(--primary), 0 1px 3px -1px rgb(0 0 0 / 0.4), 0 2px 6px 0 rgb(0 0 0 / 0.3);
+  --background: #1E1A33;
+  --primary-foreground: #1E1A33;
+  --secondary: #2A2545;
+  --secondary-foreground: #FAF8FE;
+  --muted: #2A2545;
+  --muted-foreground: #C4BCE4;
+  --accent-foreground: #B79BF0;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --band: #2A2545;
+  --band-2: #342E55;
+  --surface: #2A2545;
+  --surface-2: #241F3C;
+  --ink: #FAF8FE;
+  --ink-2: #D6CFF0;
+  --ink-3: #C4BCE4;
+  --line: #4C4470;
+  --line-2: #342E55;
+  --brand: #8B6BE8;
+  --brand-ink: #B79BF0;
+  --brand-soft: #342E55;
+  --dark-accent: #B79BF0;
+  --headline-accent: #B79BF0;
+  --highlight-soft: #342E55;
+  --highlight-deep: #B79BF0;
+  --dark: #161326;
+  --dark-2: #241F3C;
+  --dark-line: #4C4470;
+  --dark-soft: #C4BCE4;
+  --chip-1-soft: #2F3A2E;
+  --chip-1-ink: #C5D6C2;
+  --chip-2-soft: #342E55;
+  --chip-2-ink: #B79BF0;
+  --chip-3-soft: #2A2E55;
+  --chip-3-ink: #C3CBF5;
+  --glow-1: #342E55;
+  --glow-2: #2A2545;
+  --status-want: oklch(0.72 0.13 158);
+  --status-want-soft: oklch(0.34 0.04 158);
+  --status-no: oklch(0.7 0.17 22);
+  --status-no-soft: oklch(0.34 0.05 22);
+  --warm-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 16px -8px rgb(0 0 0 / 0.55);
+  --warm-shadow-md: 0 2px 6px rgb(0 0 0 / 0.38), 0 20px 44px -22px rgb(0 0 0 / 0.7);
+  --warm-shadow-lg: 0 36px 90px -38px rgb(0 0 0 / 0.8);
+}
+
+/* Second skin: Grafton, Australian spring. Cooler lilac. Same override contract. */
+.skin-grafton {
+  --brand: #4A529E;
+  --brand-ink: #4A529E;
+  --brand-soft: #ECECFD;
+  --headline-accent: #4A529E;
+  --accent-foreground: #4A529E;
+  --dark-accent: #8B93E8;
+}
+
+.dark.skin-grafton,
+.skin-grafton.dark,
+.dark .skin-grafton {
+  --brand: #8B93E8;
+  --brand-ink: #C3CBF5;
+  --brand-soft: #2A2E55;
+  --headline-accent: #C3CBF5;
+  --accent-foreground: #C3CBF5;
+  --dark-accent: #8B93E8;
+}
