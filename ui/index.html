@@ -6,10 +6,22 @@
 </head>
 <body>
 <title>Triage Agent</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <!-- @fracazo/design-system: roles first, then exactly one brand file (import order matters) -->
 <link rel="stylesheet" href="vendor/roles.css">
-<link rel="stylesheet" href="brand/triage.css">
+<link rel="stylesheet" href="brand/starter.css">
+<!-- Workaround for a framework bug, not a design choice. roles.css declares a
+     working fallback (ui-sans-serif, system-ui, sans-serif). The starter brand
+     overrides it at :root with `var(--font-geist-sans), ui-sans-serif, ...`, and
+     a custom property containing an unresolvable var() is invalid at computed
+     value time, so outside Next --font-sans resolves to nothing and the page
+     renders in Times. The fallback belongs inside the var(). Values below are
+     roles.css's own, unchanged. Reported upstream. -->
+<style>
+  :root {
+    --font-sans: var(--font-geist-sans, ui-sans-serif), system-ui, sans-serif;
+    --font-mono: var(--font-geist-mono, ui-monospace), monospace;
+  }
+</style>
 <style>
   /* ---- Jacaranda supplies colour, radius, shadow and type through roles.css
          and the brand file. The page's own names stay as aliases so the layout
@@ -23,7 +35,6 @@
        highlight ink, per DESIGN.md: periwinkle on a light surface uses the ink */
     --auto: var(--status-want);
     --auto-ink: var(--status-want-ink);
-    --auto-deep: color-mix(in oklch, var(--status-want), black 14%);
     --auto-soft: var(--status-want-soft);
     --review: var(--highlight-ink);
     --review-bar: var(--status-ifnec);
@@ -123,7 +134,7 @@
   .btn-glyph svg[data-off] { opacity: 0; transform: scale(.25); filter: blur(4px); }
   .btn-glyph svg.solid { fill: currentColor; stroke: none; margin-inline-start: 1px; }
   .btn.approve { background: var(--auto); color: var(--surface); }
-  .btn.approve:hover { background: var(--auto-deep); }
+  .btn.approve:hover { box-shadow: var(--shadow-hover); }   /* no darker-primary role exists; depth instead of a literal */
   .btn.take { background: var(--ink); color: var(--surface); }
   .btn.take:hover { background: var(--ink-lift); }
 

@@ -1,0 +1,98 @@
+/* =============================================================================
+   Brand: STARTER (src/system/brands/starter.css)
+
+   Core roles only, with achromatic placeholders, so a new product passes
+   `pnpm brand:contract` before it opts into an extension. Nothing here is
+   a brand. Replace every value, light and dark, keep the property names,
+   and rename this file to the product. Declare `brand-extensions:` only
+   when the file defines every property in that set (landing, showcase).
+
+   Two tiers. Primitives (--brand, --ink ...) hold literals here. Eight
+   semantics alias them in roles.css and are not redeclared. The six below
+   (secondary, muted, border, input, muted-foreground, accent-foreground)
+   hold their own literals because a good dark theme tunes them away from
+   the primitives; keep that freedom.
+
+   Fonts are set on :root so a plain page gets them, and repeated in @theme
+   so Tailwind's font-sans utility resolves.
+   ============================================================================= */
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+:root,
+.force-light {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --radius: 0.625rem;
+  --card-shadow: 0 0 0 1px oklch(0 0 0 / 0.06), 0 1px 2px -1px oklch(0 0 0 / 0.06), 0 2px 4px 0 oklch(0 0 0 / 0.04);
+  --card-shadow-hover: 0 0 0 1px oklch(0 0 0 / 0.08), 0 1px 2px -1px oklch(0 0 0 / 0.08), 0 2px 4px 0 oklch(0 0 0 / 0.06);
+  --card-shadow-selected: 0 0 0 1.5px var(--primary), 0 1px 3px -1px oklch(0 0 0 / 0.06), 0 2px 6px 0 oklch(0 0 0 / 0.04);
+  --background: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.94 0 0);
+  --secondary-foreground: oklch(0.25 0 0);
+  --muted: oklch(0.94 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent-foreground: oklch(0.35 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.9 0 0);
+  --input: oklch(0.9 0 0);
+  --surface: oklch(1 0 0);
+  --surface-2: oklch(0.975 0 0);
+  --ink: oklch(0.25 0 0);
+  --ink-2: oklch(0.45 0 0);
+  --ink-3: oklch(0.62 0 0);
+  --line: oklch(0.9 0 0);
+  --line-2: oklch(0.93 0 0);
+  --brand: oklch(0.5 0 0);
+  --brand-ink: oklch(0.35 0 0);
+  --brand-soft: oklch(0.93 0 0);
+  --headline-accent: var(--brand-ink);
+  --highlight: oklch(0.8 0 0);
+  --highlight-ink: oklch(0.25 0 0);
+  /* Inks clear Lc 60 on their washes (APCA 0.1.9). Text uses the ink, not the fill. */
+  --status-want: oklch(0.606 0.117 158);
+  --status-want-soft: oklch(0.945 0.012 158);
+  --status-want-ink: oklch(0.45 0.08 158);
+  --status-ifnec: var(--highlight);
+  --status-ifnec-soft: oklch(0.94 0 0);
+  --status-no: oklch(0.616 0.156 22);
+  --status-no-soft: oklch(0.949 0.017 22);
+  --status-no-ink: oklch(0.46 0.11 22);
+}
+
+.dark {
+  --card-shadow: 0 0 0 1px oklch(1 0 0 / 0.06), 0 1px 2px -1px oklch(0 0 0 / 0.4), 0 2px 4px 0 oklch(0 0 0 / 0.3);
+  --card-shadow-hover: 0 0 0 1px oklch(1 0 0 / 0.1), 0 1px 2px -1px oklch(0 0 0 / 0.5), 0 2px 4px 0 oklch(0 0 0 / 0.35);
+  --card-shadow-selected: 0 0 0 1.5px var(--primary), 0 1px 3px -1px oklch(0 0 0 / 0.4), 0 2px 6px 0 oklch(0 0 0 / 0.3);
+  --background: oklch(0.22 0 0);
+  --primary-foreground: oklch(0.2 0 0);
+  --secondary: oklch(0.33 0 0);
+  --secondary-foreground: oklch(0.94 0 0);
+  --muted: oklch(0.33 0 0);
+  --muted-foreground: oklch(0.72 0 0);
+  --accent-foreground: oklch(0.94 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --surface: oklch(0.27 0 0);
+  --surface-2: oklch(0.245 0 0);
+  --ink: oklch(0.94 0 0);
+  --ink-2: oklch(0.8 0 0);
+  --ink-3: oklch(0.72 0 0);
+  --line: oklch(0.355 0 0);
+  --line-2: oklch(0.325 0 0);
+  --brand: oklch(0.75 0 0);
+  --brand-ink: oklch(0.82 0 0);
+  --brand-soft: oklch(0.38 0 0);
+  --headline-accent: oklch(0.9 0 0);
+  --status-want: oklch(0.72 0.13 158);
+  --status-want-soft: oklch(0.34 0.04 158);
+  --status-want-ink: oklch(0.86 0.08 158);
+  --status-no: oklch(0.70 0.17 22);
+  --status-no-soft: oklch(0.34 0.05 22);
+  --status-no-ink: oklch(0.88 0.06 22);
+}
